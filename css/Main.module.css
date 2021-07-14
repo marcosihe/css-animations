@@ -1,0 +1,331 @@
+/* Main */
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.code {
+  display: flex;
+
+  background-color: #ecf5ef;
+  width: 13rem;
+  height: 13rem;
+  border-radius: 10px;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.parent {
+  display: flex;
+
+  background-color: #070433;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 10px;
+  margin: 1rem;
+}
+
+.child-box {
+  background-color: chocolate;
+  width: 6.5rem;
+  height: 6.5rem;
+  margin: 1rem;
+}
+
+/* TRANSITIONS */
+/* Box 1 */
+
+.child-1-effect {
+  transition: transform 0.5s linear;
+}
+
+.parent:hover .child-1-effect {
+  transform: translateX(100%);
+}
+/* Box 2*/
+
+.child-2-effect {
+  /* transition: transform 1s linear; */
+  transition: 0.5s linear;
+}
+
+.parent:hover .child-2-effect {
+  background-color: #009933;
+  transform: translateX(100%);
+}
+
+/* Box 3 */
+
+.child-3-effect {
+  /* transition: 1s ease-in-out; */
+  transition: 1s cubic-bezier(0.55, 0.15, 0.48, 1.78);
+}
+
+.parent:hover .child-3-effect {
+  transform: translateX(100%);
+}
+
+/* Box 4 */
+
+.child-4-effect {
+  transition: 1s cubic-bezier(0.55, 0.15, 0.48, 1.78) 2s;
+}
+
+.parent:hover .child-4-effect {
+  transform: translateX(100%);
+}
+
+/* Box 5 */
+
+.child-5-effect {
+  transition: 1s cubic-bezier(0.55, 0.15, 0.48, 1.78);
+}
+
+.parent:hover .child-5-effect {
+  transform: translateY(100%);
+}
+
+/* ANIMATIONS */
+
+/* Box 6 */
+
+.child-6-effect {
+  transition: 1s ease-in;
+}
+
+.parent:hover .child-6-effect {
+  animation: left-to-right 500ms ease-in;
+}
+
+@keyframes left-to-right {
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* Box 7 */
+
+.child-7-effect {
+  transition: 1s ease-in;
+}
+
+.parent:hover .child-7-effect {
+  animation: left-to-right-2 500ms ease-in forwards;
+}
+
+@keyframes left-to-right-2 {
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+/* Box 8 */
+/*
+.child-8-effect {
+  transition: 1s ease-in;
+}
+*/
+.parent:hover .child-8-effect {
+  animation: left-to-right-3 1s ease-in forwards;
+}
+
+@keyframes left-to-right-3 {
+  /*
+  0% { transform: translateX(0)}
+  Es un valor por defecto, por lo cual da lo mismo si lo agrego o no.
+  */
+  33% {
+    transform: translateY(100%);
+  }
+  66% {
+    transform: translateX(100%) translateY(100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Box 9 */
+
+.parent:hover .child-9-effect {
+  animation: left-to-right-4 1s ease-in forwards 3;
+}
+
+@keyframes left-to-right-4 {
+  33% {
+    transform: translateY(100%);
+  }
+  66% {
+    transform: translateX(100%) translateY(100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Box 10 */
+
+.parent:hover .child-10-effect {
+  animation: left-to-right-5 1s ease-in forwards infinite;
+}
+
+@keyframes left-to-right-5 {
+  33% {
+    transform: translateY(100%);
+  }
+  66% {
+    transform: translateX(100%) translateY(100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Box 11 */
+
+.parent:hover .child-11-effect {
+  animation: left-to-right-6 1s ease-in forwards infinite alternate;
+}
+
+@keyframes left-to-right-6 {
+  33% {
+    transform: translateY(100%);
+  }
+  66% {
+    transform: translateX(100%) translateY(100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Box 12 */
+
+.parent:hover .child-12-effect {
+  animation: left-to-right-7 1s ease-in forwards infinite alternate 2s;
+}
+
+@keyframes left-to-right-7 {
+  33% {
+    transform: translateY(100%);
+  }
+  66% {
+    transform: translateX(100%) translateY(100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Box 13 */
+
+.child-13-effect {
+  animation: left-to-right-8 1s ease-in forwards infinite alternate;
+}
+/*
+.parent:hover .child-13-effect {
+}
+*/
+@keyframes left-to-right-8 {
+  33% {
+    transform: translateY(100%);
+  }
+  66% {
+    transform: translateX(100%) translateY(100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Box 14 */
+
+.child-14-effect {
+  animation: left-to-right-9 1s ease-in forwards infinite alternate;
+}
+
+.parent:hover .child-14-effect {
+  animation-play-state: paused;
+}
+
+@keyframes left-to-right-9 {
+  33% {
+    transform: translateY(100%);
+  }
+  66% {
+    transform: translateX(100%) translateY(100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Box 15 */
+
+.child-15-effect {
+  animation: left-to-right-10 1s ease-in forwards 6 alternate;
+}
+
+.parent:hover .child-15-effect {
+  animation-play-state: paused;
+}
+
+@keyframes left-to-right-10 {
+  33% {
+    transform: translateY(100%);
+  }
+  66% {
+    transform: translateX(100%) translateY(100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Box 16 */
+
+.child-16-effect {
+  animation: left-to-right-11 1s ease-in forwards infinite alternate 2s;
+}
+
+.parent:hover .child-16-effect {
+  animation-play-state: paused;
+}
+
+@keyframes left-to-right-11 {
+  33% {
+    transform: translateY(100%);
+  }
+  66% {
+    transform: translateX(100%) translateY(100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Box 17 */
+
+.child-17-effect {
+  animation: left-to-right-12 1s ease-in forwards infinite alternate 2s;
+}
+
+.parent:hover .child-17-effect {
+  animation-play-state: paused;
+}
+
+@keyframes left-to-right-12 {
+  33% {
+    transform: translateY(100%);
+  }
+  66% {
+    transform: translateX(100%) translateY(100%);
+  }
+  100% {
+    background-color: #009933;
+    transform: translateX(100%);
+  }
+}
